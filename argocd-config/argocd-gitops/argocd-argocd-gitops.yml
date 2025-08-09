@@ -4,3 +4,15 @@ metadata:
   name: argocd-gitops
 spec:
   version: v3.0.12
+  rbac:
+    # 'policy.csv' allows managing resources in any namespace
+    policy: |
+      g, system:cluster-admins, role:admin
+    # Scopes permissions to all namespaces in the cluster
+    defaultPolicy: ''
+    scopes: '[groups, applications, clusters, repositories, projects]'
+
+  # Optional: Expose the Argo CD server via a LoadBalancer service
+  server:
+    service:
+      type: LoadBalancer
