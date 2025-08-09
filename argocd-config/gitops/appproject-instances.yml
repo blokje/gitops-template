@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: instances
+spec:
+  clusterResourceWhitelist: []
+  destinations:
+  - namespace: 'argocd-development'
+    server: 'in-cluster'
+  - namespace: 'argocd-acceptance'
+    server: 'in-cluster'
+  - namespace: 'argocd-production'
+    server: 'in-cluster'
+  sourceRepos:
+  - '*'
+status: {}

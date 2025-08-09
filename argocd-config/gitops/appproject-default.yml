@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: default
+spec:
+  clusterResourceWhitelist: []
+  destinations:
+  - namespace: 'argocd-gitops'
+    server: 'in-cluster'
+  sourceRepos:
+  - https://github.com/blokje/gitops-template.git
+status: {}
