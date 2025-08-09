@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd-production
+spec:
+  destination:
+    namespace: argocd-production
+    server: https://kubernetes.default.svc
+  source:
+    path: argocd-config/argocd-production
+    repoURL: https://github.com/blokje/gitops-template.git
+    targetRevision: main
+    directory:
+      recurse: true
+  project: instances
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
