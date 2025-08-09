@@ -6,11 +6,11 @@ spec:
   clusterResourceWhitelist: []
   destinations:
   - namespace: 'argocd-development'
-    server: 'in-cluster'
+    server: 'https://kubernetes.default.svc'
   - namespace: 'argocd-acceptance'
-    server: 'in-cluster'
+    server: 'https://kubernetes.default.svc'
   - namespace: 'argocd-production'
-    server: 'in-cluster'
+    server: 'https://kubernetes.default.svc'
   sourceRepos:
   - '*'
 status: {}
