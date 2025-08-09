@@ -17,3 +17,6 @@ spec:
     automated:
       prune: false
       selfHeal: true
+    syncOptions:
+      # Automatically create the destination namespace if it doesn't exist.
+      - CreateNamespace=true
