@@ -7,9 +7,11 @@ spec:
     namespace: argocd-gitops
     server: https://kubernetes.default.svc
   source:
-    path: platform/argocd-gitops/overlays/production
+    path: argocd-config/gitops
     repoURL: https://github.com/blokje/gitops-template.git
     targetRevision: main
+    directory:
+      recurse: true
   project: default
   syncPolicy:
     automated:
