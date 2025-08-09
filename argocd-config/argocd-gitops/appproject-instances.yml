@@ -3,7 +3,9 @@ kind: AppProject
 metadata:
   name: instances
 spec:
-  clusterResourceWhitelist: []
+  clusterResourceWhitelist:
+    - group: ""
+      kind: Namespace
   destinations:
   - namespace: 'argocd-development'
     server: 'https://kubernetes.default.svc'
