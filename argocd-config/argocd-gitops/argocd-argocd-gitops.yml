@@ -11,8 +11,3 @@ spec:
     # Scopes permissions to all namespaces in the cluster
     defaultPolicy: ''
     scopes: '[groups, applications, clusters, repositories, projects]'
-
-  # Optional: Expose the Argo CD server via a LoadBalancer service
-  server:
-    service:
-      type: LoadBalancer
