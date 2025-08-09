@@ -11,3 +11,6 @@ spec:
     # Scopes permissions to all namespaces in the cluster
     defaultPolicy: ''
     scopes: '[groups, applications, clusters, repositories, projects]'
+  extraConfig:
+    # Permit to deploy in other namespaces
+    application.namespaces: "argocd-gitops,argocd-production,argocd-acceptance,argocd-development"
