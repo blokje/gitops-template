@@ -12,7 +12,7 @@ spec:
     targetRevision: main
     directory:
       recurse: true
-  project: default
+  project: instances
   syncPolicy:
     automated:
       prune: false
