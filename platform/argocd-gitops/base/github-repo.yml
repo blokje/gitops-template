@@ -1,0 +1,10 @@
+apiVersion: v1
+stringData:
+  type: git
+  url: https://github.com/blokje/gitops-template.git
+kind: Secret
+metadata:
+  labels:
+    argocd.argoproj.io/secret-type: repository
+  name: repo-argocd-gitops
+type: Opaque

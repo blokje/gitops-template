@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   - argocd-gitops.yml
   - application.yml
+  - github-repo.yml
