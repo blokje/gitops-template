@@ -12,5 +12,4 @@ spec:
   - namespace: 'argocd-production'
     server: 'https://kubernetes.default.svc'
   sourceRepos:
-  - '*'
-status: {}
+  - https://github.com/blokje/gitops-template.git
